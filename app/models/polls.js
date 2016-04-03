@@ -3,10 +3,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Poll = new Schema({
-  title: String,
-  options: Array,
-  userId: String,
+const pollSchema = new Schema({
+  title: {type: String, required: true},
+  options: {type: Array, required: true},
+  userId: {type: String, required: true},
 });
 
-module.exports = mongoose.model('Poll', Poll);
+module.exports = mongoose.model('Poll', pollSchema);
