@@ -84,4 +84,16 @@ module.exports = function (app, passport) {
         res.json(poll);
       });
     });
+
+  app.route('/api/polls/:id')
+    .get(function (req, res) {
+      Poll.findOne({
+        _id: req.params.id
+      }, function(err, poll) {
+        if (err) { return res.status(500).json(err); }
+        res.json(poll);
+      });
+    })
+    .delete()
+    .put();
 };
