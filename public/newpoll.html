@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>FCC Voting App.</title>
+
+    <link href="/public/css/main.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <header>
+      <p>Welcome, <span id="display-name"></span>!</p>
+      <a class="menu" href="/">Polls</a>
+      <a class="menu" href="/mypolls">My Polls</a>
+      <a class="menu" href="/newpoll">New Poll</a>
+      <p>|</p>
+      <a class="menu" href="/logout">Logout</a>
+    </header>
+
+    <div class="addpoll container">
+      <h2>Add a new poll</h2>
+      <form id='new-poll-form' method='POST' action='/api/polls'>
+        <label for="title">Title</label>
+        <input name='title' type="text" placeholder="Poll 1"/>
+
+        <label for="options">Options (one on each line)</label>
+        <textarea name='options' rows='4'></textarea>
+
+        <input type="submit" value="Submit"/>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="common/ajax-functions.js"></script>
+    <script type="text/javascript" src="controllers/pollsController.client.js"></script>
+  </body>
+</html>
