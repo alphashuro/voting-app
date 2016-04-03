@@ -36,7 +36,7 @@ module.exports = function (app, passport) {
 			res.sendFile(path + '/public/profile.html');
 		});
 
-	app.route('/api/:id')
+	app.route('/api/user')
 		.get(isLoggedIn, function (req, res) {
 			res.json(req.user.github);
 		});
