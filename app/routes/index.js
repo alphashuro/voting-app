@@ -17,9 +17,24 @@ module.exports = function (app, passport) {
 	var clickHandler = new ClickHandler();
 
 	app.route('/')
-		.get(isLoggedIn, function (req, res) {
+		.get(function (req, res) {
 			res.sendFile(path + '/public/index.html');
 		});
+        
+    app.route('/polls/:id')
+        .get(function (req, res) {
+           res.sendFile(path + '/public/poll.html'); 
+        });
+
+  app.route('/mypolls')
+    .get(isLoggedIn, function (req, res) {
+      res.sendFile(path + '/public/mypolls.html');
+    });
+
+  app.route('/newpoll')
+    .get(isLoggedIn, function (req, res) {
+      res.sendFile(path + '/public/newpoll.html');
+    });
 
 	app.route('/login')
 		.get(function (req, res) {
