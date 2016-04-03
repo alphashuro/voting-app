@@ -1,14 +1,14 @@
 {
-  "name": "clementinejs-fcc",
-  "version": "1.0.1",
-  "description": "The elegant and lightweight boilerplate for full stack JavaScript.",
+  "name": "fcc-voting-app",
+  "version": "1.0.0",
+  "description": "A voting application for free code camp.",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnstonbl01/clementinejs-fcc"
+    "url": "git@github.com:alphashuro/fcc-voting-app.git"
   },
-  "homepage": "http://www.clementinejs.com/",
-  "bugs": "https://github.com/johnstonbl01/clementinejs-fcc/issues",
+  "homepage": "http://as-voting-app.heroku.com/",
+  "bugs": "git@github.com:alphashuro/fcc-voting-app/issues",
   "keywords": [
     "MongoDB",
     "Mongoose",
@@ -19,11 +19,12 @@
     "boilerplate"
   ],
   "scripts": {
-  "start": "node server.js"
+    "start": "node server.js"
   },
-  "author": "Blake Johnston",
+  "author": "Alpha Shuro",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "dotenv": "^1.2.0",
     "express": "^4.12.4",
     "express-session": "^1.11.3",
