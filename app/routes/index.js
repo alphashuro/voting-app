@@ -2,6 +2,7 @@
 
 var path = process.cwd();
 var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
+const Poll = require('../models/polls.js');
 
 module.exports = function (app, passport) {
 
@@ -54,4 +55,22 @@ module.exports = function (app, passport) {
 		.get(isLoggedIn, clickHandler.getClicks)
 		.post(isLoggedIn, clickHandler.addClick)
 		.delete(isLoggedIn, clickHandler.resetClicks);
+  app.route('/api/polls')
+    .get(function (req, res) {
+      Poll.find(function(err, polls) {
+        if (err) { return res.status(500).json(err); }
+        res.json(polls);
+      });
+    })
+    .post(isLoggedIn, function (req, res) {
+      const poll = new Poll({
+        title: req.body.title,
+        options: req.body.options,
+        userId: req.user._id,
+      });
+      poll.save(function (err) {
+        if (err) { return res.status(500).json(err); }
+        res.json(poll);
+      });
+    });
 };
