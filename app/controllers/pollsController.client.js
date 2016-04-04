@@ -1,14 +1,14 @@
 'use strict';
 
 (function () {
-  const apiUrl = appUrl + '/api/polls';
+  var apiUrl = appUrl + '/api/polls';
 
-  const $publicPollsList = document.querySelector('ul#public-polls') || null;
+  var $publicPollsList = document.querySelector('ul#public-polls') || null;
   function getPublicPolls (data) {
-    const polls = JSON.parse(data);
+    var polls = JSON.parse(data);
     if ($publicPollsList) {
-      for (const poll of polls) {
-        const li = document.createElement('li');
+      for (var poll of polls) {
+        var li = document.createElement('li');
         li.innerHTML = `<a href="/polls/${poll._id}">
                           ${poll.title}
                         </a>`;
@@ -21,7 +21,7 @@
   var newPollForm = document.getElementById('new-poll-form') || null;
   newPollForm && newPollForm.addEventListener('submit', function newPollHandler(e) {
     e.preventDefault();
-    const poll = {
+    var poll = {
       title: this.title.value,
       options: this.options.value.split('\n'),
     };
