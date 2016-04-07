@@ -5,7 +5,6 @@
     var $votesStats = document.getElementById('vote-stats');
     function getVotes(data) {
         var votes = JSON.parse(data);
-				console.log(votes);
         var totals = votes.reduce(function(previous, current) {
             previous[current.option] = previous[current.option] ? previous[current.option] + 1 : 1;
             return previous;
