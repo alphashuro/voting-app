@@ -50,6 +50,7 @@ header p {
 	padding: 6px;
 	margin: 0;
 	color: #727272;
+	transition: all .3s;
 }
 
 .menu:visited {
@@ -202,3 +203,141 @@ span {
 	display: inline;
 	margin: 0;
 }
+
+.container {
+	margin: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.polls-list {
+	list-style: none;
+	text-align: center;
+	max-width: 500px;
+	min-width: 300px;
+}
+.polls-list li a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 2px solid #222;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	text-decoration: none;
+	font-size: 1.4em;
+	color: #222;
+	transition: all .3s;
+	box-shadow: 0 0 5px #222;
+}
+.polls-list li a:hover {
+	background: #222;
+	color: white;
+	transform: scale(0.99);
+	box-shadow: none;
+}
+.title {
+	font-size: 2em;
+	font-weight: 100;
+}
+.sub-title {
+	font-size: 1.8em;
+	font-weight: 100;
+}
+.sub-text {
+	
+}
+.polls-list#private-polls button {
+	background: none;
+	padding: 4px;
+	color: red;
+	font-size: 1.3em;
+	border: none;
+	transition: all .3s;
+	border: 2px solid white;
+}
+.polls-list#private-polls button:hover {
+	box-shadow: 0 0 10px black;
+	border: 2px solid #771010;
+	transform: scale(0.9);
+}
+
+form#vote select[name="options"] {
+				font-family: Roboto;
+				min-width: 150px;
+				font-size: 1.2em;
+				justify-content: center;
+				border: 2px solid rgba(0, 0, 0, 0.54);
+				transition: all .3s;
+				border-radius: 10px;
+				margin: 10px;
+			}
+			form#vote input[type="submit"] {
+				font-family: Roboto;
+				border: 2px solid rgba(0, 0, 0, 0.71);
+				background: none;
+				font-size: 1.2em;
+				border-radius: 10px;
+				transition: all .3s;
+			}
+			form#vote input[type="submit"]:hover {
+				background: rgba(0, 0, 0, 0.71);
+				color: white;
+				cursor: pointer;
+			}
+			#add-option-container form {
+				font-size: 1.2em;
+			}
+			#add-option-container form input[name="option"] {
+				border: none;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.46);
+				padding-bottom: 5px;
+				transition: all .3s;
+				font-size: 1em;
+				width: 150px;
+			}
+			#add-option-container form input[name="option"]:focus {
+				outline: none;
+			}
+			#add-option-container form input[type="submit"] {
+				background: rgba(34, 34, 34, 0.87);
+				border: 1px solid rgba(34, 34, 34, 0.87);
+				font-size: 1em;
+				color: white;
+				padding: 5px;
+				border-radius: 5px;
+				box-shadow: 0 0 1px black;
+				transition: all .3s;
+			}
+			#add-option-container form input[type="submit"]:hover {
+				color: black;
+				background: white;
+				box-shadow: 0 0 20px black;
+				cursor: pointer;
+			}
+			
+			.button {
+				font-family: Roboto;
+				border: 2px solid rgba(0, 0, 0, 0.71);
+				background: none;
+				font-size: 1.2em;
+				border-radius: 10px;
+				transition: all .3s;
+			}
+			.button:hover {
+				background: rgba(0, 0, 0, 0.71);
+				color: white;
+				cursor: pointer;
+			}
+
+			form#new-poll-form {
+				display: flex;
+				flex-direction: column;
+				font-size: 1.2em;
+			}
+			form#new-poll-form * {
+				font-size: 1em;
+			}
