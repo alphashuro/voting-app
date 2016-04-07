@@ -38,12 +38,7 @@ module.exports = function(app, passport) {
 			req.logout();
 			res.redirect('/');
 		});
-
-	app.route('/profile')
-		.get(isLoggedIn, function(req, res) {
-			res.sendFile(path + '/public/profile.html');
-		});
-
+		
 	app.route('/auth/github')
 		.get(passport.authenticate('github'));
 
