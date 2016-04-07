@@ -1,7 +1,6 @@
 'use strict';
 
 var path = process.cwd();
-var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
 var Poll = require('../models/polls.js');
 var Vote = require('../models/votes.js');
 
@@ -14,8 +13,6 @@ module.exports = function(app, passport) {
             res.redirect('/login');
         }
     }
-
-    var clickHandler = new ClickHandler();
 
     app.route('/')
         .get(function(req, res) {
