@@ -28,7 +28,7 @@ var ajaxFunctions = {
       data = args.length > 0 ? args.shift() : null; 
 
       xmlhttp.onreadystatechange = function () {
-         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+         if (xmlhttp.readyState === 4) {
             callback && callback(xmlhttp.response);
          }
       };
